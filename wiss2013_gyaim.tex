@@ -1,0 +1,187 @@
+%
+%	WISS 2013サンプルファイル (未来ビジョンテンプレート, 最後数行空き問題解決バージョン)
+%
+%	2010/07/12 Ver 1.0 秋田 純一
+%	2010/08/04 Ver 1.1 後藤 真孝
+% 	2011/09/27  Ver 1.4 渡邊 恵太 (協力：五十嵐悠紀)
+
+
+\documentclass[twoside]{wiss}
+
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+\usepackage{nidanfloat} %% appended in WISS2010 for Future Vision (2010/7/7:akita)
+\usepackage{multicol}
+%\usepackage{color,array}
+%\usepackage{boxedminipage}
+
+%% balance.styを追加 (2012/9/27:watanabe, Igarashi)
+\usepackage{balance}    %% 最後のページの高さを揃えるために追加  (2012/9/27:watanabe, Igarashi)
+%%% 最後のページの2段組の高さを揃える．\balanceを入れる．
+%%% そろえたくないときは、\nobalance
+
+
+
+\journalhead{Gyaim} %%%%%% ←←　著者において必ず記入すること
+
+\begin{document}
+
+\title{Gyaim}
+\etitle{}%2012年では英文タイトルは廃止されました．記入しないでください．
+%
+%注意
+%
+%
+% WISS2013ではダブルブラインドとなりました．投稿時には氏名と所属は記入しないでください．
+\author{匿名で査読を行うため著者名なし
+	\affil{匿名で査読を行うため所属名なし}}
+
+\begin{abstract}
+誰もが毎日のようにテキスト入力と編集を行っている。ユーザの用途に応じた、多くのエディタソフトが存在するが、それらが持つ編集操作の方法と、編集機能は必ずしも同じではない。
+そこで、日本語などの入力を可能にする IME(Input Method Editor) を、編集操作にも活用することにより、様々なエディタやOSでのテキスト編集作業を共通化することが可能になる。本論文では、エディタ間の操作や機能の差異をIMEにより解決する例を示す。
+\end{abstract}
+
+\maketitle
+
+\section{はじめに}
+
+\subsection{エディタとテキスト編集における問題}
+
+計算機上でテキストを編集するために様々なテキストエディタが利用されている。メールを書くためにはメールクライアントを利用し、コンソールでのプログラム開発 には vi や Emacs を利用し、IDE を利用した開発では付属のエディタを利用し、Web上でデータを書き込むにはブラウザ上のテキストフォームを利用するといったように、場合によって異なるエディタを利用することが日常的になっている。
+
+これらのエディタソフトには、それぞれ、異なる機能と異なる操作体系が実装されている。たとえば、 ブラウザ上のテキストフォームには秘密文字列を隠蔽する機能があり、特定のテキストエリアをフォーカスすることで動作する。文書編集ソフトやプログラム開発用のエディタはそれぞれ、スペルチェックや文法チェック、単語補完の機能を備えている。Emacsやviといったエディタではユーザが拡張スクリプトを導入することで、操作と機能を拡張していくことができる。
+
+これらの機能を利用するために必要な操作がエディタごとに異なっているのは不便である。 ブラウザ以外の場所でも秘密文字列を入力したいという要望や、Emacsと同じキーバインドでブラウザのテキストフォームを移動したい、といった要望に答えるためには、それぞれのエディタ開発者が随時アップデートを行うほかなかった。理想的には、どのような状況でも同じ操作でテキスト編集を行なえるべきであろう。
+
+個別に実装されたエディタの操作を統一することは不可能かもしれないが、様々なエディタで共通に利用できるソフトウェア層をユーザとアプリケーションの間に置くことにより、 異なるエディタの編集操作をある程度共通化できる可能性がある。
+
+\subsection{問題の解決手法}
+
+現在のパソコンには IME(Input Method Editor) と呼ばれる文字入力機構が用意されており、様々な言語のテキスト入力に利用されている。たとえば日本語入力用のIMEを利用すれば、Emacs でもブラウザでも IDE でも同じ操作で日本語を入力できる。
+IME はテキストエディタのようなアプリケーションとは独立した実装であり、ユーザとアプリケーションとの間にあるソフトウェアである。すべてのキー入力をハンドルし、各国語に変換した結果をアプリケーションに送出している。このIMEが、テキストの挿入/移動/削除といった編集操作を受け持つことにより、入力の場合と同様に、どのエディタでも同じ操作で編集が可能になる。
+
+\section{実装例}
+
+MacRubyで記述された IME である「Gyaim」に様々な編集機能を追加したものを利用した編集作業の例を示す。一般にIME はアルファベット以外の文字を入力するときだけ有効にするのが普通であるが、ここでは Gyaim を 常に有効にしておくことによりあらゆるキー入力を Gyaim が取得している。
+
+\subsection{ブロック移動}
+
+%%% グラフの例
+%\begin{figure*}[htb]
+%\centering
+%\includegraphics[scale=0.6]{graph.eps} 
+%\caption{グラフの例}
+%\label{figure:graph}
+%\end{figure*} 
+\subsection{文字列暗号化}
+\subsection{Dynamic Macro}
+
+以上の機能に加え、文字のスワップやキャレット移動といった基本的な編集操作をGyaimは実装しており、システムやアプリケーションによらないテキスト編集が可能である。
+
+\section{実装}
+Gyaim は MacRuby で記述された Mac 用の IME であり、ソースが 500 行程度とコンパクトであるにもかかわらず、他の IME に見られない機能を実装しており、本論文のような実験も容易である。
+
+\subsection{MacRuby}
+MacRuby は、Mac 用のアプリケーションを開発するために拡張された Ruby 実行環境であり、Mac の Objective-C ライブラリを Ruby で扱うことが出来る。
+Gyaim では、日本語などの入力を補助するフレームワークである InputMethodKit Framework を MacRuby から呼び出すことによって基本的な IME の機能を実装している。
+
+しかし、ブロック移動やインデントの処理をあらゆる テキストエリアで行うためには、テキストフィールドに 入力されている全文をIMEが取得する必要があり、InputMethodKit はこの機能を備えていない。Gyaim では、AppleScript などを併用することによりこの問題を解決したが、実装には課題が残っている。
+
+
+\section*{謝辞}
+
+謝辞は、ブラインドレビューのため、投稿時には削除すること．
+カメラレディ時に、必要があれば追加すること．
+
+\section{参考文献}
+%%
+%%	参考文献
+%%
+% \begin{thebibliography}{1}
+
+% \bibitem{wiss} WISSホームページ.  http://www.wiss.org/.
+
+% \bibitem{aoki1999} H.~Aoki, B.~Schiele, and A.~Pentland.  Realtime
+% Personal Positioning System for Wearable Computers.  In
+% \emph{Proceedings of the 3rd IEEE International Symposium on Wearable
+% Computers}, pp. 37--43, 1999.
+
+% \bibitem{rekimoto2000} 暦本 純一.  まえがき：WISS2000について.  インタラ
+% クティブシステムとソフトウェアVIII, pp. i--ii. 近代科学社, 2000.
+
+% \end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WISS2012では，「未来ビジョン」は以下のように，本文と同様の2段組形式で記載する．
+%% 図を用いても良いが，枠のサイズ(縦93mm)を変更してはならない．
+%% （WISS2010では，縦118mmでしたのでご注意下さい）
+
+
+\begin{figure*}[!b]
+\setlength{\unitlength}{1mm}\fboxrule=0.5pt
+
+\vspace{-93mm} %% 未来ビジョンの枠が下がってしまうのを防ぐ WIS2012 カメラレディテンプレで追加  (2012/9/27:watanabe, Igarashi)
+
+% 未来ビジョンの枠の描画
+\begin{center}
+\framebox[0.95\textwidth]{
+\begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
+}
+\end{center}
+\vspace*{-93mm}	% 未来ビジョンの枠の縦幅分だけ戻す
+
+% 未来ビジョンの内容
+\newbox\FUTURE
+\setbox\FUTURE=\vbox{
+\begin{minipage}[b]{0.9\textwidth}
+\begin{multicols}{2}	% 二段組にする
+\section*{未来ビジョン}
+\setlength{\parindent}{10pt}	% 段落先頭の字下げ
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%	   未来ビジョンは，下記に記入して下さい		  %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\vspace*{-1mm}
+
+% フォントサイズ指定
+\normalsize
+%\large
+%\small\setlength{\baselineskip}{12pt}
+%\footnotesize\setlength{\baselineskip}{12pt}
+
+未来ビジョン
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%	   未来ビジョンは，上記に記入して下さい		  %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\end{multicols}
+\end{minipage}
+}
+
+% 未来ビジョンの内容の描画
+\newlength{\FUTUREHT}
+\setlength{\FUTUREHT}{\the\ht\FUTURE}	% 未来ビジョンの内容の縦幅保存
+%\typeout{\the\wd\FUTURE}
+%\typeout{\the\ht\FUTURE}
+\hspace*{0.045\textwidth}	% 未来ビジョンの内容の横位置調整
+\box\FUTURE
+%\typeout{\the\FUTUREHT}
+\vspace*{-\the\FUTUREHT}	% 未来ビジョンの内容の縦幅分だけ戻す
+\vspace*{-10.9mm}		% 微調整
+
+% 未来ビジョンの枠の領域の再確保（これがないと枠が下に沈み込む）
+\begin{center}
+\fboxrule=0pt
+%\fboxrule=2pt	% デバッグ用: コメントアウトをやめて，同じ位置に枠が出るか？
+\framebox[0.9\textwidth]{
+\begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
+}
+\end{center}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
