@@ -15,7 +15,7 @@
 %
 % Please notify Shouichi MATSUI(matsui@denken.or.jp) of any bugs in
 % these standard styles or in this documentation file.
-% ¼ˆä ³ˆê  (à) “d—Í’†‰›Œ¤‹†Š@î•ñƒVƒXƒeƒ€•”
+% æ¾äº• æ­£ä¸€  (è²¡) é›»åŠ›ä¸­å¤®ç ”ç©¶æ‰€ã€€æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ éƒ¨
 
 ENTRY
   { address
@@ -216,13 +216,13 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr "{ff}{ll}" format.name$ is.kanji.str$
-%“ú–{Œê‚Ìê‡‚Íƒtƒ‹ƒl[ƒ€‚Æ‚·‚é‚½‚ß‚ÉˆÈ‰º‚Ìs‚ð’u‚«Š·‚¦ by siio
+%æ—¥æœ¬èªžã®å ´åˆã¯ãƒ•ãƒ«ãƒãƒ¼ãƒ ã¨ã™ã‚‹ãŸã‚ã«ä»¥ä¸‹ã®è¡Œã‚’ç½®ãæ›ãˆ by siio
 % 	{ s nameptr "{ff}" format.name$ 't :=
 	{ s nameptr "{ff }{ll}" format.name$ 't :=
-%ƒGƒ‰[‚ð•\Ž¦‚·‚éˆÓ–¡‚ª–³‚¢‚Ì‚ÅˆÈ‰º‚Ìs‚ðíœ by siio
+%ã‚¨ãƒ©ãƒ¼ã‚’è¡¨ç¤ºã™ã‚‹æ„å‘³ãŒç„¡ã„ã®ã§ä»¥ä¸‹ã®è¡Œã‚’å‰Šé™¤ by siio
 % 	  t empty$
 %	   { s nameptr "{ll}" format.name$ 't :=
-%	      t " ‚É‚ÍC©‚Æ–¼‚ÌŠÔ‚É‹ó”’‚ª‚È‚¢‚æH in " * cite$ * warning$
+%	      t " ã«ã¯ï¼Œå§“ã¨åã®é–“ã«ç©ºç™½ãŒãªã„ã‚ˆï¼Ÿ in " * cite$ * warning$
 %	    }
 % 	    'skip$
 % 	  if$
@@ -234,7 +234,7 @@ FUNCTION {format.names}
 	    {", " * t * }
 	    { t "others" =
  		{ s is.kanji.str$
- 			{"‘¼" * }
+ 			{"ä»–" * }
  			{", et~al." * }
  		  if$
  		}
@@ -272,10 +272,10 @@ FUNCTION {format.editors}
     { editor format.names
       editor num.names$ #1 >
  	{ editor is.kanji.str$
- 		{"i•Òj" * } {" eds." * } if$
+ 		{"ï¼ˆç·¨ï¼‰" * } {" eds." * } if$
  	}
  	{ editor is.kanji.str$
- 		{"i•Òj" *} {" ed." * } if$
+ 		{"ï¼ˆç·¨ï¼‰" *} {" ed." * } if$
  	}
       if$
     }
@@ -364,7 +364,7 @@ FUNCTION {format.bvolume}
     { volume is.kanji.str$
 	{ volume }
 	{ is.kanji.entry
-	    {"‘æ" volume * "Šª" *}
+	    {"ç¬¬" volume * "å·»" *}
 	    {"Vol." volume tie.or.space.connect}
 	  if$
 	}
@@ -417,7 +417,7 @@ FUNCTION {format.edition}
     { edition is.kanji.str$
 	{ edition }
         { is.kanji.entry
-	    {"‘æ" edition * "”Å" *}
+	    {"ç¬¬" edition * "ç‰ˆ" *}
 	    { output.state mid.sentence =
 	      { edition "l" change.case$ " edition" * }
 	      { edition "t" change.case$ " edition" * }
@@ -497,7 +497,7 @@ FUNCTION {format.chapter.pages}
 	{ chapter is.kanji.str$
 	    { "" }
 	    { is.kanji.entry
-		{"Í"}
+		{"ç« "}
 		{"chapter"}
 	      if$
 	    }
@@ -506,7 +506,7 @@ FUNCTION {format.chapter.pages}
 	{ type "l" change.case$ }
       if$
       chapter is.kanji.str$ not is.kanji.entry and
-          {"‘æ" chapter * swap$ *}
+          {"ç¬¬" chapter * swap$ *}
           { chapter is.kanji.str$
 		{chapter *}
 		{chapter tie.or.space.connect}
@@ -612,13 +612,13 @@ FUNCTION {format.crossref.editor}
   editor num.names$ duplicate$
   #2 >
     { editor is.kanji.str$
-	  {pop$ "‘¼" *} {pop$ ", et~al." * } if$
+	  {pop$ "ä»–" *} {pop$ ", et~al." * } if$
     }
     { #2 <
 	'skip$
 	{ editor #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
  	    { editor is.kanji.str$
- 		{"‘¼" *} {", et~al." * } if$
+ 		{"ä»–" *} {", et~al." * } if$
  	    }
  	    { editor is.kanji.str$
  		{
@@ -650,7 +650,7 @@ FUNCTION {format.book.crossref}
     { volume is.kanji.str$
 	{ volume }
 	{ is.kanji.entry
-	    {"‘æ" volume * "Šª" *}
+	    {"ç¬¬" volume * "å·»" *}
 	    {"Vol." volume tie.or.space.connect " of " *  }
 	  if$
 	}
@@ -1101,8 +1101,8 @@ MACRO {toplas} {"ACM Trans. Prog. Lang. Syst."}
 
 MACRO {tcs} {"Theoretical Comput. Sci."}
 
-MACRO {tieice} {"MŠw˜_"}
-MACRO {tipsj}  {"î•ñˆ—Šw‰ï˜_•¶Ž"}
+MACRO {tieice} {"ä¿¡å­¦è«–"}
+MACRO {tipsj}  {"æƒ…å ±å‡¦ç†å­¦ä¼šè«–æ–‡èªŒ"}
 MACRO {jipsj}  {"J.~Info. Proc. Soc. of Japan"}
 MACRO {jorsj}  {"Journal of the O. R. Society of Japan"}
 
@@ -1164,7 +1164,7 @@ FUNCTION {sort.format.names}
       s nameptr "{vv{ } }{ll{ }}{  f{ }}{  jj{ }}" format.name$ 't :=
       nameptr numnames = t "others" = and
  	{ s is.kanji.str$
- 		{"‘¼" * }
+ 		{"ä»–" * }
  		{"et~al." *}
 	  if$
  	}

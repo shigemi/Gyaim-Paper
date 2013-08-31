@@ -15,7 +15,7 @@
 % jst-wiss.sty 25 Dec 93 by Akikazu Takeuchi takeuchi@csl.sony.co.jp
 % WISS
 % jst-wiss.sty 19 Sep 97 by Toshio Hirotsu hirotsu@brl.ntt.co.jp
-% \def\fnum@table{•\ \thetable} is revised
+% \def\fnum@table{è¡¨ \thetable} is revised
 % remove page number
 % jst-wiss.sty 25 Sep 98 by Yasunori Harada hara@brl.ntt.co.jp
 % jst-wiss.sty 22 Sep 99 by Toshihiro Takada takada@t.onlab.ntt.co.jp
@@ -106,10 +106,10 @@
 \setcounter{tocdepth}{3}
 
 \def\acknowledgements#1{\vspace{5mm}\par
-             \noindent{{\bfseries Ó« }}#1}
+             \noindent{{\bfseries è¬è¾ }}#1}
 \def\endacknowledgements{\par}
 
-\def\thebibliography#1{\section*{{\bfseries Ql•¶Œ£}\markboth
+\def\thebibliography#1{\section*{{\bfseries å‚è€ƒæ–‡çŒ®}\markboth
  {REFERENCES}{REFERENCES}\vspace{2mm}}\list
  {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
  \advance\leftmargin\labelsep
@@ -155,7 +155,7 @@
 \def\fps@figure{tbp}
 \def\ftype@figure{1}
 \def\ext@figure{lof}
-\def\fnum@figure{} \thefigure}
+\def\fnum@figure{å›³ \thefigure}
 \def\figure{\@float{figure}}
 \let\endfigure\end@float
 \@namedef{figure*}{\@dblfloat{figure}}
@@ -166,7 +166,7 @@
 \def\fps@table{tbp}
 \def\ftype@table{2}
 \def\ext@table{lot}
-\def\fnum@table{•\ \thetable}
+\def\fnum@table{è¡¨ \thetable}
 \def\table{\@float{table}}
 \let\endtable\end@float
 \@namedef{table*}{\@dblfloat{table}}
@@ -200,7 +200,7 @@
  \begin{minipage}[b]{160mm} 
    \begin{small}
    \setlength\parindent{1.5em}
-   \noindent{\bfseries ŠT—v.\ }
+   \noindent{\bfseries æ¦‚è¦.\ }
 }
 \def\endabstract{\end{small}\end{minipage}\egroup}
 \def\@abstract{abstract}
@@ -234,7 +234,7 @@
 
 \begin{flushleft}
  {\Large\bfseries\bfseries \@title%
-%   \copyrightnotice{\copyright~2006~“ú–{ƒ\ƒtƒgƒEƒFƒA‰ÈŠw‰ïISSŒ¤‹†‰ïD} \par} \vskip 3\p@
+%   \copyrightnotice{\copyright~2006~æ—¥æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ç§‘å­¦ä¼šISSç ”ç©¶ä¼šï¼} \par} \vskip 3\p@
 %% begin of modify 2006/07/12 (akita)
    \copyrightnotice{Copyright is held by the author(s).} \par} \vskip 3\p@
 %% end of modify
