@@ -5,6 +5,15 @@ MacRubyで記述されたMac用日本語IMEである「Gyaim\footnote{
  \textsf{https://github.com/masui/Gyaim}
 }」に様々な編集機能を追加して作成した。
 %
+図\ref{japaneseinput}は{\system}による日本語入力の例である。
+IMEはアルファベット以外の文字を入力するときだけ有効にするのが普通であるが、{\system}は、編集操作を行うために常に有効であることを想定して実装した。そのため、英語入力と日本語入力の両方が可能である。
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=70mm,bb=0 0 600 400]{figures/japanese.png}}
+\caption{{\system}の変換候補ウィンドウ。}
+\label{japaneseinput}
+\end{figure}
+
 本章では{\system}を利用した様々な編集作業の例を示す。
 IMEはアルファベット以外の文字を入力するときだけ有効にするのが普通であるが、
 ここでは{\system}を常に有効にしておくことにより、
