@@ -1,0 +1,94 @@
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WISS2012では，「未来ビジョン」は以下のように，本文と同様の2段組形式で記載する．
+%% 図を用いても良いが，枠のサイズ(縦93mm)を変更してはならない．
+%% （WISS2010では，縦118mmでしたのでご注意下さい）
+
+
+\begin{figure*}[!b]
+\setlength{\unitlength}{1mm}\fboxrule=0.5pt
+
+\vspace{-93mm} %% 未来ビジョンの枠が下がってしまうのを防ぐ WIS2012 カメラレディテンプレで追加  (2012/9/27:watanabe, Igarashi)
+
+% 未来ビジョンの枠の描画
+\begin{center}
+\framebox[0.95\textwidth]{
+\begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
+}
+\end{center}
+\vspace*{-93mm}	% 未来ビジョンの枠の縦幅分だけ戻す
+
+% 未来ビジョンの内容
+\newbox\FUTURE
+\setbox\FUTURE=\vbox{
+\begin{minipage}[b]{0.9\textwidth}
+\begin{multicols}{2}	% 二段組にする
+\section*{未来ビジョン}
+\setlength{\parindent}{10pt}	% 段落先頭の字下げ
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%	   未来ビジョンは，下記に記入して下さい		  %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\vspace*{-1mm}
+
+% フォントサイズ指定
+\normalsize
+%\large
+%\small\setlength{\baselineskip}{12pt}
+%\footnotesize\setlength{\baselineskip}{12pt}
+
+テキストエディタの研究は長い歴史を持っているが\cite{texteditors.org}、
+近年はタブレットやモバイル環境における入力手法に関する研究%
+\cite{Li:1lineKB}%
+\cite{MacKenzie:H4Writer}%
+\cite{Rick:VirtualKB}%
+や特殊装置を使う文字入力装置に関する研究%
+\cite{Dietz:PressureKB}%
+\cite{Harrison:Skinput}%
+\cite{Murase:CameraKB}%
+\cite{Wigdor:TiltKB}
+が主流になっており、一般的なテキストエディタを改善する研究は少ないようである。
+
+実際には1章で述べたような問題点が多数あるにもかかわらず、
+ユーザも研究者もそれに気付いていないかあきらめてしまっているのは問題であろう。
+システムごとに異なる操作方法を覚えなければいけないということは
+ユーザに重荷を押し付けていることであり、
+感心できる話ではない。
+
+現状で普及しているシステムについてであっても
+本当にユニバーサルに使えるようにするために再考が必要であろう。
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%	   未来ビジョンは，上記に記入して下さい		  %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\end{multicols}
+\end{minipage}
+}
+
+% 未来ビジョンの内容の描画
+\newlength{\FUTUREHT}
+\setlength{\FUTUREHT}{\the\ht\FUTURE}	% 未来ビジョンの内容の縦幅保存
+%\typeout{\the\wd\FUTURE}
+%\typeout{\the\ht\FUTURE}
+\hspace*{0.045\textwidth}	% 未来ビジョンの内容の横位置調整
+\box\FUTURE
+%\typeout{\the\FUTUREHT}
+\vspace*{-\the\FUTUREHT}	% 未来ビジョンの内容の縦幅分だけ戻す
+\vspace*{-10.9mm}		% 微調整
+
+% 未来ビジョンの枠の領域の再確保（これがないと枠が下に沈み込む）
+\begin{center}
+\fboxrule=0pt
+%\fboxrule=2pt	% デバッグ用: コメントアウトをやめて，同じ位置に枠が出るか？
+\framebox[0.9\textwidth]{
+\begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
+}
+\end{center}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
