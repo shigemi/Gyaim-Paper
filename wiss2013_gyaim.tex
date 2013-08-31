@@ -20,6 +20,10 @@
 %%% 最後のページの2段組の高さを揃える．\balanceを入れる．
 %%% そろえたくないときは、\nobalance
 
+
+%% Here.stylを追加
+\usepackage{here}
+
 \def\system{SuperIME}
 \def\papertitle{\system: IMEによるテキスト編集機能の統合}
 
@@ -43,26 +47,7 @@
 
 \input{intro}
 
-\section{実装例}
-
-MacRubyで記述された IME である「Gyaim」に様々な編集機能を追加したものを
-利用した編集作業の例を示す。一般にIME はアルファベット以外の文字を入力
-するときだけ有効にするのが普通であるが、ここでは Gyaim を 常に有効にし
-ておくことによりあらゆるキー入力を Gyaim が取得している。
-
-\subsection{ブロック移動}
-
-%%% グラフの例
-%\begin{figure*}[htb]
-%\centering
-%\includegraphics[scale=0.6]{graph.eps} 
-%\caption{グラフの例}
-%\label{figure:graph}
-%\end{figure*} 
-\subsection{文字列暗号化}
-\subsection{Dynamic Macro}
-
-以上の機能に加え、文字のスワップやキャレット移動といった基本的な編集操作をGyaimは実装しており、システムやアプリケーションによらないテキスト編集が可能である。
+\input{example}
 
 \section{実装}
 Gyaim は MacRuby で記述された Mac 用の IME であり、ソースが 500 行程度とコンパクトであるにもかかわらず、他の IME に見られない機能を実装しており、本論文のような実験も容易である。
@@ -116,75 +101,77 @@ Dynamic Macro system\cite{DynamicMacro}
 % \end{thebibliography}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% WISS2012では，「未来ビジョン」は以下のように，本文と同様の2段組形式で記載する．
-%% 図を用いても良いが，枠のサイズ(縦93mm)を変更してはならない．
-%% （WISS2010では，縦118mmでしたのでご注意下さい）
+%%% 未来ビジョンの枠が変なところに出る
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% WISS2012では，「未来ビジョン」は以下のように，本文と同様の2段組形式で記載する．
+% %% 図を用いても良いが，枠のサイズ(縦93mm)を変更してはならない．
+% %% （WISS2010では，縦118mmでしたのでご注意下さい）
 
 
-\begin{figure*}[!b]
-\setlength{\unitlength}{1mm}\fboxrule=0.5pt
+% \begin{figure*}[!b]
+% \setlength{\unitlength}{1mm}\fboxrule=0.5pt
 
-\vspace{-93mm} %% 未来ビジョンの枠が下がってしまうのを防ぐ WIS2012 カメラレディテンプレで追加  (2012/9/27:watanabe, Igarashi)
+% \vspace{-93mm} %% 未来ビジョンの枠が下がってしまうのを防ぐ WIS2012 カメラレディテンプレで追加  (2012/9/27:watanabe, Igarashi)
 
-% 未来ビジョンの枠の描画
-\begin{center}
-\framebox[0.95\textwidth]{
-\begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
-}
-\end{center}
-\vspace*{-93mm}	% 未来ビジョンの枠の縦幅分だけ戻す
+% % 未来ビジョンの枠の描画
+% \begin{center}
+% \framebox[0.95\textwidth]{
+% \begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
+% }
+% \end{center}
+% \vspace*{-93mm}	% 未来ビジョンの枠の縦幅分だけ戻す
 
-% 未来ビジョンの内容
-\newbox\FUTURE
-\setbox\FUTURE=\vbox{
-\begin{minipage}[b]{0.9\textwidth}
-\begin{multicols}{2}	% 二段組にする
-\section*{未来ビジョン}
-\setlength{\parindent}{10pt}	% 段落先頭の字下げ
+% % 未来ビジョンの内容
+% \newbox\FUTURE
+% \setbox\FUTURE=\vbox{
+% \begin{minipage}[b]{0.9\textwidth}
+% \begin{multicols}{2}	% 二段組にする
+% \section*{未来ビジョン}
+% \setlength{\parindent}{10pt}	% 段落先頭の字下げ
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%	   未来ビジョンは，下記に記入して下さい		  %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% %	   未来ビジョンは，下記に記入して下さい		  %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-\vspace*{-1mm}
+% \vspace*{-1mm}
 
-% フォントサイズ指定
-\normalsize
-%\large
-%\small\setlength{\baselineskip}{12pt}
-%\footnotesize\setlength{\baselineskip}{12pt}
+% % フォントサイズ指定
+% \normalsize
+% %\large
+% %\small\setlength{\baselineskip}{12pt}
+% %\footnotesize\setlength{\baselineskip}{12pt}
 
-未来ビジョン
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%	   未来ビジョンは，上記に記入して下さい		  %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% 未来ビジョン
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% %	   未来ビジョンは，上記に記入して下さい		  %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-\end{multicols}
-\end{minipage}
-}
+% \end{multicols}
+% \end{minipage}
+% }
 
-% 未来ビジョンの内容の描画
-\newlength{\FUTUREHT}
-\setlength{\FUTUREHT}{\the\ht\FUTURE}	% 未来ビジョンの内容の縦幅保存
-%\typeout{\the\wd\FUTURE}
-%\typeout{\the\ht\FUTURE}
-\hspace*{0.045\textwidth}	% 未来ビジョンの内容の横位置調整
-\box\FUTURE
-%\typeout{\the\FUTUREHT}
-\vspace*{-\the\FUTUREHT}	% 未来ビジョンの内容の縦幅分だけ戻す
-\vspace*{-10.9mm}		% 微調整
+% % 未来ビジョンの内容の描画
+% \newlength{\FUTUREHT}
+% \setlength{\FUTUREHT}{\the\ht\FUTURE}	% 未来ビジョンの内容の縦幅保存
+% %\typeout{\the\wd\FUTURE}
+% %\typeout{\the\ht\FUTURE}
+% \hspace*{0.045\textwidth}	% 未来ビジョンの内容の横位置調整
+% \box\FUTURE
+% %\typeout{\the\FUTUREHT}
+% \vspace*{-\the\FUTUREHT}	% 未来ビジョンの内容の縦幅分だけ戻す
+% \vspace*{-10.9mm}		% 微調整
 
-% 未来ビジョンの枠の領域の再確保（これがないと枠が下に沈み込む）
-\begin{center}
-\fboxrule=0pt
-%\fboxrule=2pt	% デバッグ用: コメントアウトをやめて，同じ位置に枠が出るか？
-\framebox[0.9\textwidth]{
-\begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
-}
-\end{center}
-\end{figure*}
+% % 未来ビジョンの枠の領域の再確保（これがないと枠が下に沈み込む）
+% \begin{center}
+% \fboxrule=0pt
+% %\fboxrule=2pt	% デバッグ用: コメントアウトをやめて，同じ位置に枠が出るか？
+% \framebox[0.9\textwidth]{
+% \begin{minipage}{0mm}\begin{picture}(0,91)(0,0)\end{picture}\end{minipage}
+% }
+% \end{center}
+% \end{figure*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
