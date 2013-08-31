@@ -1,10 +1,6 @@
 %
-%	WISS 2013サンプルファイル (未来ビジョンテンプレート, 最後数行空き問題解決バージョン)
+% WISS2013投稿論文
 %
-%	2010/07/12 Ver 1.0 秋田 純一
-%	2010/08/04 Ver 1.1 後藤 真孝
-% 	2011/09/27  Ver 1.4 渡邊 恵太 (協力：五十嵐悠紀)
-
 
 \documentclass[twoside]{wiss}
 
@@ -27,16 +23,13 @@
 \def\system{\textsf{SuperIME\texttrademark}}
 \def\papertitle{\system: IMEによるテキスト編集機能の統合}
 
-\journalhead{\papertitle} %%%%%% ←←　著者において必ず記入すること
+\journalhead{\papertitle}
 
 \begin{document}
 
 \title{\papertitle}
-\etitle{}%2012年では英文タイトルは廃止されました．記入しないでください．
-%
-%注意
-%
-%
+\etitle{} % 英文タイトルなし
+
 % WISS2013ではダブルブラインドとなりました．投稿時には氏名と所属は記入しないでください．
 \author{匿名で査読を行うため著者名なし
 	\affil{匿名で査読を行うため所属名なし}}
@@ -55,23 +48,7 @@
 
 \input{conclusion}
 
-\section*{謝辞}
-
-謝辞は、ブラインドレビューのため、投稿時には削除すること．
-カメラレディ時に、必要があれば追加すること．
-
-\cite{Kawada:WP}
-\cite{Mori:WordProcessor}
-\cite{Doi:STARS}
-\cite{Doi:COLING98}
-\cite{texteditors.org}
-\cite{Tesler:CopyPaste}.
-\cite{Masui:Goldfish}\cite{PickAndDrop}.
-
-% \section{参考文献}
-
 \bibliographystyle{jwiss}
 \bibliography{paper}
-
 
 \end{document}
