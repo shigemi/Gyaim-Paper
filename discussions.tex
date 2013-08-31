@@ -17,6 +17,30 @@
 ておけばシステム全体のショートカット設定などは不要になる。
 
 \textbf{**** 編集補助の話をこのあたりに書いてほしい}
+また、文書の整形以外にも、IMEの実装によりテキスト入力を補助するという考え方はより広範な入力に当てはめることができる。
+{\system}では、単語の言い換えを補助するために、図\ref{synonym}のように類語を入力することが出来る。
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=70mm,bb=0 0 350 250]{figures/synonym.png}}
+\caption{{\system}の類語変換機能の例。}
+\label{synonym}
+\end{figure}
+
+図\ref{image1},\ref{image2}は{\system}の画像入力の例である。
+ここでは、「知らない」という入力語句について画像を検索し、入力候補として表示している。
+画像が埋め込めるテキストエリアであれば画像を埋め込み、そうでなければURLを入力する、といった機能も、IMEにより実装することができる。
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=70mm,bb=0 0 600 400]{figures/image1.png}}
+\caption{{\system}で「知らない」という単語を入力した例。}
+\label{image1}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=70mm,bb=0 0 600 400]{figures/image2.png}}
+\caption{{\system}の画像入力ウィンドウ。}
+\label{image2}
+\end{figure}
 
 \subsection{本手法の限界}
 
