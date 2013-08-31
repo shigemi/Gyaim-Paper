@@ -1,8 +1,11 @@
 sample.*
-wiss2013_gyaim.aux
-wiss2013_gyaim.dvi
-wiss2013_gyaim.log
-wiss_template.log
+*.aux
+*.dvi
+*.log
+*.log
+*.pdf
+*.bbl
+*.blg
 wiss_template.tex
 .DS_Store
 
