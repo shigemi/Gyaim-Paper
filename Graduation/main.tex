@@ -33,31 +33,20 @@
 
 \bindermode  % バインダー用余白設定
 
+\def\system{\textsf{SuprIME}}
+\def\papertitle{\system: IMEによるテキスト編集機能の統合}
+
 % 日本語情報（必要なら）
 \jclass  {修士論文}                             % 論文種別
-\jtitle    {修士論文用 \LaTeX\ テンプレート}    % タイトル。改行する場合は\\を入れる
+\jtitle    {\papertitle}    % タイトル。改行する場合は\\を入れる
 \juniv    {慶應義塾大学大学院}                  % 大学名
-\jfaculty  {政策・メディア研究科}               % 学部、学科
-\jauthor  {ほげ山 ふう助}                       % 著者
-\jhyear  {24}                                   % 平成○年度
-\jsyear  {2012}                                 % 西暦○年度
-\jkeyword  {\LaTeX、テンプレート、修士論文}     % 論文のキーワード
-\jproject{インタラクションデザインプロジェクト} %プロジェクト名
-\jdate{2013年1月}
-
-% 英語情報（必要なら）
-\eclass  {Master's Thesis}                            % 論文種別
-\etitle    {A \LaTeX Template for Master Thesis}      % タイトル。改行する場合は\\を入れる
-\euniv  {Keio University}                             % 大学名
-\efaculty  {Graduate School of Media and Governance}  % 学部、学科
-\eauthor  {Fusuke Hogeyama}                           % 著者
-\eyear  {2012}                                        % 西暦○年度
-\ekeyword  {\LaTeX, Templete, Master Thesis}          % 論文のキーワード
-\eproject{Interaction Design Project}                 %プロジェクト名
-\edate{January 2013}
-
-
-
+\jfaculty  {環境情報学部}               % 学部、学科
+\jauthor  {中園 翔}                       % 著者
+\jhyear  {25}                                   % 平成○年度
+\jsyear  {2013}                                 % 西暦○年度
+\jkeyword  {IME,入力システム,テキスト編集,エディタ}     % 論文のキーワード
+\jproject{増井俊之研究会} %プロジェクト名
+\jdate{2014年1月}
 
 
 \begin{document}
@@ -68,18 +57,26 @@
   \emaketitle    % 表紙（英語）
 \fi
 
-\include{00_abstract}  % アブストラクト。要独自コマンド、include先参照のこと
+\include{abstract}  % アブストラクト。要独自コマンド、include先参照のこと
 
 \tableofcontents  % 目次
-\listoffigures    % 表目次
-\listoftables    % 図目次
+\listoffigures    % 図目次
 
 \pagenumbering{arabic}
 
-\include{01}  % 本文1
-\include{02}  % 本文2
-\include{03}  % 本文3
-\include{04}  % 本文4
+
+\include{introduction}
+
+\include{examples}
+
+\include{implementation}
+
+\include{discussions}
+
+
+\include{conclusion}
+
+\include{nocites}
 
 \include{90_acknowledgment}  % 謝辞。要独自コマンド、include先参照のこと
 \include{91_bibliography}  % 参考文献。要独自コマンド、include先参照のこと

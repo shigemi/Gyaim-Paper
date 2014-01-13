@@ -1,8 +1,24 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces {\textsf {SuprIME}}による日本語入力の例}}{6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ブロック移動前の状態}}{6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Shift+↑キーを押した後の状態}}{6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces ブロック移動前の状態}}{6}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Shift+↑キーを押した後の状態}}{7}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces ブロック移動前の状態}}{7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces テキストを選択した状態}}{7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces ブロック移動後の状態}}{7}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces 単語置換ウィンドウの例}}{8}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces 置換ウィンドウに単語を入力した例}}{8}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces 単語置換後の状態}}{8}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Dynamic Macro機能を使用する前のテキスト}}{8}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Dynamic Macro機能を使用した後のテキスト}}{9}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Dynamic Macro機能を使用する前のテキスト}}{9}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Dynamic Macro機能を使用した後のテキスト}}{9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 図の例}}{14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 図を並べる例1}}{16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 図を並べる例2、枠なし}}{16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces {\textsf {SuprIME}}の類語変換機能の例}}{15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces {\textsf {SuprIME}}で「知らない」という単語を入力した例}}{15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces {\textsf {SuprIME}}の画像入力ウィンドウ}}{15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

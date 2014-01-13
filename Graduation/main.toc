@@ -1,38 +1,42 @@
 \contentsline {chapter}{\numberline {第1章}序論}{1}
-\contentsline {section}{\numberline {1.1}背景}{1}
-\contentsline {section}{\numberline {1.2}本文書の構成}{2}
-\contentsline {chapter}{\numberline {第2章}本テンプレートの使い方}{3}
-\contentsline {section}{\numberline {2.1}テンプレートの構成}{3}
-\contentsline {section}{\numberline {2.2}コンパイル}{3}
-\contentsline {section}{\numberline {2.3}設定}{4}
-\contentsline {subsection}{\numberline {2.3.1}論文全体の言語の設定}{4}
-\contentsline {subsection}{\numberline {2.3.2}余白の設定}{4}
-\contentsline {subsection}{\numberline {2.3.3}論文情報の設定}{5}
-\contentsline {section}{\numberline {2.4}出力}{6}
-\contentsline {subsection}{\numberline {2.4.1}外部ファイルの読み込み（{\tt include}）}{6}
-\contentsline {subsection}{\numberline {2.4.2}表紙の出力}{7}
-\contentsline {subsection}{\numberline {2.4.3}アブストラクトの出力}{7}
-\contentsline {subsection}{\numberline {2.4.4}目次類の出力}{8}
-\contentsline {subsection}{\numberline {2.4.5}本文の出力}{8}
-\contentsline {subsection}{\numberline {2.4.6}謝辞の出力}{9}
-\contentsline {subsection}{\numberline {2.4.7}参考文献の出力}{9}
-\contentsline {subsection}{\numberline {2.4.8}付録の出力}{11}
-\contentsline {chapter}{\numberline {第3章}\LaTeX の書き方}{13}
-\contentsline {section}{\numberline {3.1}主なコマンド}{13}
-\contentsline {subsection}{\numberline {3.1.1}章と節}{13}
-\contentsline {subsubsection}{\numberline {(1)}小々節見出しサンプルその1}{13}
-\contentsline {subsubsection}{\numberline {(2)}小々節見出しサンプルその2}{14}
-\contentsline {subsection}{\numberline {3.1.2}図}{14}
-\contentsline {subsection}{\numberline {3.1.3}表}{16}
-\contentsline {subsection}{\numberline {3.1.4}脚注}{18}
-\contentsline {section}{\numberline {3.2}その他のコマンド}{18}
-\contentsline {chapter}{\numberline {第4章}結論}{19}
-\contentsline {section}{\numberline {4.1}まとめ}{19}
-\contentsline {section}{\numberline {4.2}大事なこと}{19}
-\contentsline {chapter}{謝辞}{20}
-\contentsline {chapter}{参考文献}{22}
-\contentsline {chapter}{\numberline {付 録A }付録の例}{25}
-\contentsline {section}{\numberline {A.1}ほげ}{25}
-\contentsline {subsection}{\numberline {A.1.1}ふー}{25}
-\contentsline {section}{\numberline {A.2}ほげほげ}{25}
-\contentsline {subsection}{\numberline {A.2.1}ふーふー}{25}
+\contentsline {subsection}{\numberline {1.0.1}計算機とテキストエディタ}{1}
+\contentsline {subsection}{\numberline {1.0.2}エディタの編集機能の操作}{1}
+\contentsline {subsection}{\numberline {1.0.3}IMEという層}{1}
+\contentsline {chapter}{\numberline {第2章}{\textsf {SuprIME}}使用例}{3}
+\contentsline {section}{\numberline {2.1}日本語入力}{3}
+\contentsline {subsection}{\numberline {2.1.1}かな漢字変換入力の例}{3}
+\contentsline {section}{\numberline {2.2}ブロック移動}{3}
+\contentsline {subsection}{\numberline {2.2.1}ブロック移動入力の例}{3}
+\contentsline {subsection}{\numberline {2.2.2}ブロック移動入力のGoogle Docs上での動作例}{4}
+\contentsline {section}{\numberline {2.3}連続インデント}{4}
+\contentsline {subsection}{\numberline {2.3.1}連続インデントの例}{4}
+\contentsline {section}{\numberline {2.4}単語置換}{4}
+\contentsline {subsection}{\numberline {2.4.1}単語置換の例}{4}
+\contentsline {section}{\numberline {2.5}Dynamic Macro}{5}
+\contentsline {subsection}{\numberline {2.5.1}Dynamic Macroシステム}{5}
+\contentsline {subsection}{\numberline {2.5.2}\textsf {SuprIME}上におけるDynamic Macroの動作例}{5}
+\contentsline {subsection}{\numberline {2.5.3}ブラウザ上における\textsf {SuprIME}のDynamic Macro機能の動作例}{5}
+\contentsline {chapter}{\numberline {第3章}実装}{11}
+\contentsline {section}{\numberline {3.1}MacRubyによる実装}{11}
+\contentsline {section}{\numberline {3.2}修飾キーの扱い}{11}
+\contentsline {section}{\numberline {3.3}テキストデータの取得}{11}
+\contentsline {subsection}{\numberline {3.3.1}Mac OSX上での実装}{12}
+\contentsline {section}{\numberline {3.4}実装手法の問題点}{12}
+\contentsline {chapter}{\numberline {第4章}議論}{13}
+\contentsline {section}{\numberline {4.1}キー操作の統一の必要性}{13}
+\contentsline {subsection}{\numberline {4.1.1}コピー＆ペースト}{13}
+\contentsline {section}{\numberline {4.2}ユニバーサルな入力/編集}{13}
+\contentsline {section}{\numberline {4.3}高度な文書編集補助}{13}
+\contentsline {subsection}{\numberline {4.3.1}類語入力の動作例}{14}
+\contentsline {subsection}{\numberline {4.3.2}画像入力の動作例}{14}
+\contentsline {section}{\numberline {4.4}テキスト入力/編集以外への応用}{14}
+\contentsline {subsection}{\numberline {4.4.1}テキスト入力以外の応用例}{14}
+\contentsline {section}{\numberline {4.5}本手法の限界}{14}
+\contentsline {chapter}{\numberline {第5章}結論}{17}
+\contentsline {chapter}{謝辞}{18}
+\contentsline {chapter}{参考文献}{20}
+\contentsline {chapter}{\numberline {付 録A }付録の例}{23}
+\contentsline {section}{\numberline {A.1}ほげ}{23}
+\contentsline {subsection}{\numberline {A.1.1}ふー}{23}
+\contentsline {section}{\numberline {A.2}ほげほげ}{23}
+\contentsline {subsection}{\numberline {A.2.1}ふーふー}{23}
